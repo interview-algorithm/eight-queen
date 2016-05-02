@@ -26,25 +26,16 @@ export const queen = n => {
   };
 
   const place = col => {
-    let foundSafePos;
     if (N === col) {
       ret.push(queue.slice());
-      foundSafePos = true;
     } else {
-      let row = 0;
-      while (row < N && !foundSafePos) {
+      for (let row = 0; row < N; ++row) {
         if (isSafe(col, row)) {
           queue[col] = row;
-          foundSafePos = place(col + 1);
-          if (!foundSafePos) {
-            row += 1;
-          }
-        } else {
-          row += 1;
+          place(col + 1);
         }
       }
     }
-    return foundSafePos;
   };
 
   for (let j = 0; j < N; ++j) {
@@ -53,5 +44,4 @@ export const queen = n => {
   }
 
   return ret;
-
 };

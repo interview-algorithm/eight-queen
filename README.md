@@ -9,7 +9,8 @@ Eight queen
     $ npm install eight-queen --save
 
 ```js
-var dist = require('eight-queen');
+var queen = require('eight-queen').queen;
+queen(8);
 ```
 
 # author
@@ -21,9 +22,9 @@ MIT
 [npm-url]: https://npmjs.org/package/eight-queen
 [downloads-image]: http://img.shields.io/npm/dm/eight-queen.svg
 [npm-image]: http://img.shields.io/npm/v/eight-queen.svg
-[travis-url]: https://travis-ci.org/anonymous/eight-queen
-[travis-image]: http://img.shields.io/travis/anonymous/eight-queen.svg
-[david-dm-url]:https://david-dm.org/anonymous/eight-queen
-[david-dm-image]:https://david-dm.org/anonymous/eight-queen.svg
-[david-dm-dev-url]:https://david-dm.org/anonymous/eight-queen#info=devDependencies
-[david-dm-dev-image]:https://david-dm.org/anonymous/eight-queen/dev-status.svg
+[travis-url]: https://travis-ci.org/interview-algorithm/eight-queen
+[travis-image]: http://img.shields.io/travis/interview-algorithm/eight-queen.svg
+[david-dm-url]:https://david-dm.org/interview-algorithm/eight-queen
+[david-dm-image]:https://david-dm.org/interview-algorithm/eight-queen.svg
+[david-dm-dev-url]:https://david-dm.org/interview-algorithm/eight-queen#info=devDependencies
+[david-dm-dev-image]:https://david-dm.org/interview-algorithm/eight-queen/dev-status.svg
