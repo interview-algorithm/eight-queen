@@ -11,10 +11,16 @@
   */
 'use strict';
 
+import isInteger from 'is-integer';
+
 export const queen = n => {
   const N = n;
   const queue = new Array(N);
   const ret = [];
+
+  if (!isInteger(N) || N < 1) {
+    throw new TypeError('A positive integer is required');
+  }
 
   const isSafe = (col, row) => {
     for (let i = 0; i < col; ++i) {

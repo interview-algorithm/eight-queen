@@ -2,8 +2,15 @@ var queen = require('../eight-queen').queen;
 var assert = require('assert');
 
 describe('queen', function() {
-  describe('8', function() {
-    it('should get 92 results', function() {
+  describe('illegal', function() {
+    it('shoud throw error', function() {
+      assert.throws(function() {
+        queen(-1);
+      });
+    });
+  });
+  describe('calculate', function() {
+    it('N=8 should get 92 results', function() {
       var q = queen(8);
       for (var i = 0; i < q.length; ++i) {
         var matrix = q[i];
